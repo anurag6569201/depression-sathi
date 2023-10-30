@@ -1,0 +1,40 @@
+@media (max-width: 599px) {
+
+    #msc_calm .card,
+    #msc_positivity .card,
+    #msc_self_care .card,
+    #msc_inspiration .card,
+    #msc_relax .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainfeature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newfeature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width:769px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) and (min-width:600px) {
+    html {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,44 @@
+body {
+    background: #c2d5e8;
+    background-image: url(../images/dot_effect.png);
+    background-repeat: repeat;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 3em;
+    padding: 0 0 0 2em;
+    color: grey;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.cardbodys .row,
+.cardbodys {
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardbodys .card {
+    margin-right: 1em;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 0;
+}
+
+.videosbody .row .card {
+    margin: 1em;
+    background-color: transparent;
+    overflow: hidden;
+    padding: 0;
+}
+
+.videosbody .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

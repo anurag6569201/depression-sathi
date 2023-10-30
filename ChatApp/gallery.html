@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="gallery.css">
+    <style>
+        .videosbody .card:hover,
+        .cardbodys .card:hover {
+            scale: 1.03;
+            cursor: pointer;
+            box-shadow: 0 0 4px 4px rgb(180, 188, 192);
+        }
+    </style>
+    <style>
+        .navbar .nav-link {
+            font-weight: 700;
+            font-size: 1.4em;
+        }
+
+        .container {
+            background-color: #b9cbdb;
+            background-image: url(../images/dot_effect.png);
+            background-repeat: repeat;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border: none;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        main {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+
+        button.btn-primary {
+            margin-top: 20px;
+        }
+
+        button.btn-primary:hover {
+            background-color: #ff6f61;
+            border: none;
+        }
+
+        #hiddenContent {
+            margin-top: 20px;
+            display: none;
+        }
+
+        #blogs,
+        #video,
+        #place {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2.5em;
+        }
+
+        .article-content {
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="text-align: left;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.php"><img src="../images/logo.png" width="45px"
+                    style="border-radius:50%" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#video">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#place">Places</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h4 id="blogs">Blogs</h4>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="../images/blogs/comedi.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Comedy, Connection, and Healing</h5>
+                        <p class="card-text">The Power Of Shared Laughter...</p>
+                        <p class="author">Written by Anurag singh</p>
+                        <p>Published on October 29, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <main>
+                    <div class="article-content">
+                        <p>Welcome to our blog post on "Comedy, Connection, and Healing." In this post, we explore the
+                            profound impact of shared laughter and humor on our well-being, relationships, and overall
+                            happiness.</p>
+
+                        <h2>The Power Of Shared Laughter</h2>
+
+                        <p>Laughter is a universal language that transcends cultural boundaries. It has the remarkable
+                            ability to connect people, break down barriers, and provide a sense of unity. When we share
+                            a good laugh with others, it creates a bond that goes beyond words. Laughter is contagious,
+                            and the more you laugh with others, the more connected you feel.</p>
+
+                        <h2>Healing Through Humor</h2>
+
+                        <p>Comedy isn't just about entertainment; it's also a powerful tool for healing. Laughter
+                            triggers the release of endorphins, our body's natural feel-good chemicals. It reduces
+                            stress, boosts our immune system, and can even alleviate pain. Many therapeutic practices,
+                            like laughter yoga, incorporate humor to improve mental and physical health.</p>
+
+
+                        <div id="hiddenContent">
+                            <h2>Fostering Positive Relationships</h2>
+                            <p>Comedy can play a significant role in building and maintaining positive relationships.
+                                Couples who share laughter tend to experience lower levels of conflict and greater
+                                relationship satisfaction. Friends who laugh together often form stronger bonds and
+                                create lasting memories. Laughter can be the glue that holds relationships together
+                                during challenging times.</p>
+                            <h2>Conclusion</h2>
+                            <p>In this blog post, we've explored how comedy, connection, and healing are interlinked.
+                                Shared laughter not only brings joy and happiness but also strengthens our connections
+                                with others and promotes healing. So, the next time you have the opportunity to enjoy a
+                                good laugh, embrace it, and appreciate the connections and healing it brings into your
+                                life.</p>
+                        </div>
+
+                        <button id="dis_btn1" onclick="toggleContent()" class="btn btn-primary">Read More</button>
+                </main>
+            </div>
+            <script>
+                function toggleContent() {
+                    var hiddenContent = document.getElementById('hiddenContent');
+                    var button = document.getElementById('dis_btn1');
+
+                    if (hiddenContent.style.display === 'none') {
+                        hiddenContent.style.display = 'block';
+                        button.innerHTML = 'Read Less';
+                    } else {
+                        hiddenContent.style.display = 'none';
+                        button.innerHTML = 'Read More';
+                    }
+                }
+            </script>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <div class="container main-container mt-4">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="../images/blogs/unmask.jpg" alt="Unmasking Happiness Image"
+                        class="card-img-top blog-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Unmasking Happiness</h5>
+                        <p class="author">Written by Anurag singh</p>
+                        <p class="date">Published on 13 may 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <main>
+                    <div class="article-content">
+                        <p>
+                            Unmasking happiness is about revealing the genuine joy that lies beneath the surface, often
+                            hidden behind the masks we wear in our daily lives. It's a journey of self-discovery, a
+                            quest to find contentment and inner peace.
+                        </p>
+
+                        <h2>The Quest for Authentic Happiness</h2>
+
+                        <p>
+                            In a world where we're constantly pressured to present our best selves to others, it's easy
+                            to lose sight of our true emotions and desires. We wear masks of strength, perfection, and
+                            even indifference, often concealing our vulnerabilities.
+                        </p>
+
+                        <h2>Steps to Unmasking Happiness</h2>
+
+                        <ul>
+                            <li>Self-Reflection: Take time to reflect on your life, your goals, and what truly makes you
+                                happy. Ask yourself what masks you wear and why.</li>
+                            <li>Embrace Vulnerability: It's okay to show vulnerability. Share your feelings with trusted
+                                friends or a therapist. It's a sign of strength, not weakness.</li>
+                            <li>Practice Gratitude: Focus on the positive aspects of your life. Practicing gratitude can
+                                help shift your perspective and uncover happiness.</li>
+                            <li>Pursue Your Passions: Engage in activities that bring you joy and fulfillment. Do what
+                                you love, not what you think you should love.</li>
+                            <li>Connect with Others: Building genuine connections with people who accept you for who you
+                                are can be incredibly rewarding.</li>
+                        </ul>
+
+                        <div class="hidden-content1" style="display: none;">
+                            <h2>Peel Away the Masks</h2>
+
+                            <p>
+                                Remember, unmasking happiness is a personal journey that takes time. It's about letting
+                                go of societal expectations and embracing your uniqueness. When you peel away the
+                                layers, you may find that happiness was there all along, waiting to be discovered.
+                            </p>
+
+                            <p>
+                                So, take off that mask, be your authentic self, and let happiness shine through.
+                            </p>
+                        </div>
+                        <button id="dis_btn2" onclick="toggleContent1()" class="btn btn-primary">Read More</button>
+                    </div>
+                </main>
+                <script>
+                    function toggleContent1() {
+                        var hiddenContent = document.querySelector('.hidden-content1');
+                        var button = document.getElementById('dis_btn2');
+
+                        if (hiddenContent.style.display === 'none') {
+                            hiddenContent.style.display = 'block';
+                            button.innerHTML = 'Read Less';
+                        } else {
+                            hiddenContent.style.display = 'none';
+                            button.innerHTML = 'Read More';
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container main-container mt-4">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="../images/blogs/gloom.jpg" alt="From Gloom to Bloom Image"
+                        class="card-img-top blog-image">
+                    <div class="card-body">
+                        <h1>From Gloom to Bloom</h1>
+                        <p class="author">Written by Anurag singh</p>
+                        <p>Published on October 27, 2023</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <main>
+                    <div class="article-content">
+                        <p>Life is full of ups and downs, and sometimes it can feel like you're stuck in a never-ending
+                            gloom. But remember, even in the darkest of times, there is a glimmer of hope that can lead
+                            to a beautiful transformation. This blog explores the real stories of individuals who have
+                            triumphed over darkness and found their way from gloom to bloom.</p>
+
+                        <h2>Finding Light in the Darkness</h2>
+                        <p>For many, the journey from gloom to bloom begins with acknowledging their struggles. It's
+                            important to understand that it's okay to feel down and to seek help when needed. Whether
+                            it's a professional therapist, a support group, or a close friend, reaching out and sharing
+                            your feelings can be the first step towards healing.</p>
+
+                        <h2>Turning Adversity into Strength</h2>
+                        <p>Adversity often has the power to transform us. Many of the individuals featured in this blog
+                            share their experiences of how the challenges they faced became the catalyst for personal
+                            growth. Through resilience, determination, and a positive mindset, they were able to turn
+                            their adversity into strength.</p>
+
+                        <h2>Inspiring Stories of Triumph</h2>
+                        <p>We'll introduce you to remarkable individuals who have faced various forms of adversity, such
+                            as mental health issues, loss, or challenging life circumstances. Their stories are a
+                            testament to the human spirit's capacity for resilience and transformation. You'll be
+                            inspired by their journeys from gloom to bloom.</p>
+                        <div class="hidden-content3" style="display: none;">
+                            <h2>Conclusion</h2>
+                            <p>The path from gloom to bloom may not be easy, but it is possible. It's a journey of
+                                self-discovery, resilience, and the belief that brighter days are ahead. We hope this
+                                blog leaves you with a sense of hope and encouragement to face your challenges and find
+                                your way from gloom to bloom.</p>
+
+                        </div>
+                        <button id="dis_btn3" onclick="toggleContent3()" class="btn btn-primary">Read More</button>
+                    </div>
+                </main>
+                <script>
+                    function toggleContent3() {
+                        var hiddenContent = document.querySelector('.hidden-content3');
+                        var button = document.getElementById('dis_btn3');
+
+                        if (hiddenContent.style.display === 'none') {
+                            hiddenContent.style.display = 'block';
+                            button.innerHTML = 'Read Less';
+                        } else {
+                            hiddenContent.style.display = 'none';
+                            button.innerHTML = 'Read More';
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container main-container mt-4">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img src="../images/blogs/behind.jpg" alt="Behind the Laughter Image"
+                        class="card-img-top blog-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Behind the Laughter</h5>
+                        <p class="card-text">Finding Joy Amidst the Shadows...</p>
+                        <p class="author">Written by Anurag singh</p>
+                        <p>Published on October 25, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <main>
+                    <div class="article-content">
+                        <h2>Introduction</h2>
+                        <p>Laughter is a powerful force that can bring joy and healing to our lives. But have you ever
+                            wondered what lies behind the laughter? In this blog, we'll take a closer look at the deeper
+                            aspects of laughter and the journey to finding joy amidst the shadows.</p>
+
+                        <h2>The Mask of Laughter</h2>
+                        <p>It's often said that the happiest people are the ones who hide the most pain. Behind the
+                            laughter, many of us wear masks to conceal our true emotions. We smile to cover up the
+                            tears, and we laugh to mask the pain. But what happens when we peel back the layers of our
+                            emotions?</p>
+
+                        <h2>Finding Joy Amidst the Shadows</h2>
+                        <p>Life is a journey filled with ups and downs, and it's essential to acknowledge both the
+                            laughter and the tears. It's in the moments of vulnerability and self-discovery that we can
+                            find true joy. This blog explores how we can find happiness even in the midst of life's
+                            challenges.</p>
+                        <div class="hidden-content4" style="display: none;">
+                            <h2>Conclusion</h2>
+                            <p>Behind the laughter, there is a world of emotions waiting to be explored. It's a journey
+                                of self-discovery, healing, and finding joy amidst the shadows. So, the next time you
+                                find yourself laughing, take a moment to reflect on the emotions behind that smile, and
+                                you might just discover a deeper sense of happiness.</p>
+
+                        </div>
+                        <button id="dis_btn4" onclick="toggleContent4()" class="btn btn-primary">Read More</button>
+                    </div>
+                </main>
+                <script>
+                    function toggleContent4() {
+                        var hiddenContent = document.querySelector('.hidden-content4');
+                        var button = document.getElementById('dis_btn4');
+
+                        if (hiddenContent.style.display === 'none') {
+                            hiddenContent.style.display = 'block';
+                            button.innerHTML = 'Read Less';
+                        } else {
+                            hiddenContent.style.display = 'none';
+                            button.innerHTML = 'Read More';
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <h4 id="video">Videos</h4>
+
+    <div class="videosbody">
+        <div class="row">
+            <!-- Video card 1 -->
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">BK Shivani</h5>
+                        <p class="card-text">How to Heal Myself? Should I Get My Past Life Regression Done?</p>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/b3iWGl_Ce6U?si=Ao8TwhoyiBO64Yi4"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video card 2 -->
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Sadhguru</h5>
+                        <p class="card-text">Insight Into Depression</p>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/hzvT0vy5cjE?si=FCKWRTaI9fE5RuYa"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More video sections, similar to the first one, go here -->
+
+    <!-- Places section -->
+    <h4 id="place">Nearby Silent Places</h4>
+    <div class="videosbody">
+        <div class="row">
+            <!-- Place card 1 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">Mendhasel Reserved Forest</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59877.33192301257!2d85.64689442167968!3d20.286469000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1907c262314e13%3A0x8f4e46b5397510d!2z4Kyu4K2H4Kyj4K2N4Kyi4Ky-4Ky24Ky-4KyzIOCsuOCsguCssOCsleCtjeCst-Csv-CspCDgrJzgrJngrY3grJfgrLIsIE1lbmRoYXNhbCBSZXNlcnZlZCBGb3Jlc3Q!5e0!3m2!1sen!2sin!4v1696637870837!5m2!1sen!2sin"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Place card 2 -->
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">Selfie Point</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59885.79001371959!2d85.75606072167972!3d20.26456239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7ec0904a12b%3A0xf496bc2a21de176d!2sSelfie%20point!5e0!3m2!1sen!2sin!4v1696637958444!5m2!1sen!2sin"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- More place cards, similar to the first one, go here -->
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Depression sathi. <br>Creator->Anurag singh <br> All rights reserved.</p>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>

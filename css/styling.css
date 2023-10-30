@@ -1,0 +1,297 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding: 4em;
+}
+
+html {
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: transparent;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.navbar .nav-link {
+  font-weight: 700;
+}
+
+.toptext {
+  position: relative;
+  bottom: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* main text animation ------------------- */
+
+
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated-title {
+  color: #ffffff;
+  animation-name: showanimationtext;
+  animation-duration: 0.7s;
+  display: flex;
+  align-items: center;
+  transform: translate(0, 3em);
+  justify-content: center;
+  flex-direction: column;
+  font-family: Roboto, Arial, sans-serif;
+  scale: 2;
+}
+
+.animated-title>.text-top {
+  border-bottom: 2px solid rgb(36, 36, 36);
+  top: 0;
+  overflow: hidden;
+}
+
+.animated-title>.text-top>div {
+  animation: showTopText 1s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title>.text-top>div>span:first-child {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.animated-title>.text-bottom {
+  bottom: 0;
+  overflow: hidden;
+}
+
+.animated-title>.text-bottom>div {
+  animation: showBottomText 0.5s;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+
+.container_div {
+  background-image: url(../images/main.webp);
+  background-size: cover;
+  color: white;
+  padding: 0;
+  height: 60vh;
+  display: block;
+}
+
+.content_part {
+  background-image: url(../images/dot_effect.png);
+  color: white;
+  background-color: #c2d5e8;
+  box-shadow: 0 0 2em 2em #c2d5e8;
+  text-align: center;
+  background-blend-mode: multiply;
+  /* Add other styles for your content here */
+}
+
+
+.content_part h3 {
+  color: grey;
+  font-weight: 700;
+}
+
+.function {
+  padding: 0em 1.5em 1em 1.5em;
+  grid-column-gap: 1em;
+}
+
+.img-fluid {
+  border-radius: 1em;
+}
+
+.function .card {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  scale: 0.8;
+}
+
+.function small {
+  position: absolute;
+  top: 1.5em;
+  left: 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: grey;
+}
+
+.function span {
+  position: absolute;
+  top: 4.2em;
+  left: 1.5em;
+  font-weight: 700;
+  color: white;
+}
+
+/* logoutbuttton */
+.logout {
+  display: block;
+  background: #333;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
+  position: absolute;
+  right: 5em;
+  top: 1em;
+}
+
+/* music part */
+.music_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.music_content {
+  background: url(../images/dot_effect.png), linear-gradient(#c2d5e8, #f7f0e6, #f7f0e6);
+  color: grey;
+  text-align: center;
+}
+
+.music_banner_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.msc_btn {
+  margin-right: 1em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+.buttons_music.btn {
+  background: linear-gradient(180deg, hsla(35, 52%, 94%, 1) 0%, hsla(210, 45%, 84%, 1) 100%);
+  margin: 0 1em 1em 0;
+}
+
+.msc_interface .card {
+  background: transparent;
+  border: none;
+}
+
+.msc_interface .card h5 {
+  color: grey;
+  font-weight: 700;
+}
+
+/* music content of buttons */
+#msc_relax {
+  display: block;
+}
+
+#msc_inspiration {
+  display: none;
+}
+
+#msc_self_care {
+  display: none;
+}
+
+#msc_positivity {
+  display: none;
+}
+
+#msc_calm {
+  display: none;
+}
+
+.msc_thought {
+  padding: .6em 1em;
+}
+
+.msc_thought small {
+  color: grey;
+}
+
+.buttons_music {
+  margin: 1em 0;
+}
+
+.msc_interface .row {
+  padding: .6em 2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+#msc_calm .card,
+#msc_positivity .card,
+#msc_self_care .card,
+#msc_inspiration .card,
+#msc_relax .card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-body audio {
+  margin-top: 0.6em;
+}
+
+.card .card :nth-child(2) .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#accordion .card {
+  background-color: transparent;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: grey;
+  font-weight: 550;
+}
